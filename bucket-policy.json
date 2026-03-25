@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCloudFrontAccess",
+      "Effect": "Allow",
+      "Principal": { "Service": "cloudfront.amazonaws.com" },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::aws-lab4-akos-web/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::833726713196:distribution/E2871DO4EZ36H2"
+        }
+      }
+    }
+  ]
+}
